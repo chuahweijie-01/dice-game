@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>骰子遊戲</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main-container">
+    <div class="game-section">
+      <div class="game-grid">
+        <!-- Row 1 -->
+        <div class="num-display" data-position="1,1">
+          <div class="dice-face">-</div>
+        </div>
+        <div class="empty-cell"></div>
+        <div class="num-display" data-position="1,2">
+          <div class="dice-face">-</div>
+        </div>
+        <!-- Row 2 -->
+        <div class="num-display" data-position="2,1">
+          <div class="dice-face">-</div>
+        </div>
+        <div id="dice" title="擲骰子">
+          <div class="dice-face">
+            <div class="dot center"></div>
+          </div>
+        </div>
+        <div class="num-display" data-position="2,2">
+          <div class="dice-face">-</div>
+        </div>
+        <!-- Row 3 -->
+        <div class="num-display" data-position="3,1">
+          <div class="dice-face">-</div>
+        </div>
+        <div class="empty-cell"></div>
+        <div class="num-display" data-position="3,2">
+          <div class="dice-face">-</div>
+        </div>
+      </div>
+      <button id="clear-btn">清除所有輸入</button>
+    </div>
+    
+    <div class="result-section">
+      <h3 id="result-title">擲骰子!</h3>
+      <div id="result-message">點擊骰子開始遊戲</div>
+      
+      <div class="keypad-section">
+        <div class="keypad">
+          <button class="keypad-btn" onclick="setNumber(1)">1</button>
+          <button class="keypad-btn" onclick="setNumber(2)">2</button>
+          <button class="keypad-btn" onclick="setNumber(3)">3</button>
+          <button class="keypad-btn" onclick="setNumber(4)">4</button>
+          <button class="keypad-btn" onclick="setNumber(5)">5</button>
+          <button class="keypad-btn" onclick="setNumber(6)">6</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
